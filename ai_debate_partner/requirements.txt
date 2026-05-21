@@ -1,0 +1,11 @@
+streamlit>=1.33.0
+openai>=1.40.0
+scikit-fuzzy>=0.5.0
+scipy>=1.14.0
+networkx>=3.4.0
+numpy>=1.26.0
+matplotlib>=3.8.0
+python-dotenv>=1.0.1
+nltk>=3.9.1
+textblob>=0.18.0.post0
+streamlit-mic-recorder>=0.0.8
