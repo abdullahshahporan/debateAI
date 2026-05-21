@@ -464,7 +464,16 @@ with st.sidebar:
         st.info("Click Assign Sides to start the debate.")
 
     api_key_present = bool(os.getenv("OPENAI_API_KEY"))
-    st.write("OpenAI API key:", "Configured" if api_key_present else "Missing")
+    ai_provider = os.getenv("AI_PROVIDER", "openai").strip().lower()
+    stt_provider = os.getenv("STT_PROVIDER", ai_provider).strip().lower()
+    st.write("Speech-to-text:", "Groq" if stt_provider == "groq" else "OpenAI")
+    st.write("Feedback provider:", "Groq" if ai_provider == "groq" else "OpenAI")
+    if ai_provider == "groq" or stt_provider == "groq":
+        st.write("Groq API key:", "Configured" if os.getenv("GROQ_API_KEY") else "Missing")
+        if stt_provider != "groq":
+            st.write("OpenAI STT key:", "Configured" if api_key_present else "Missing")
+    else:
+        st.write("OpenAI API key:", "Configured" if api_key_present else "Missing")
 
 left_col, right_col = st.columns([1.12, 0.88], gap="large")
 

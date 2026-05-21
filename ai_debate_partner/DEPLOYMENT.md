@@ -14,7 +14,8 @@ Use **Streamlit Community Cloud** or **Render/Railway** for the full app.
 3. Create a new app from your repo.
 4. Set main file to `ai_debate_partner/app.py`.
 5. Add secret `OPENAI_API_KEY` in Streamlit Secrets.
-6. Deploy.
+6. Optional for Groq: add `AI_PROVIDER=groq`, `STT_PROVIDER=groq`, `GROQ_API_KEY`, `GROQ_MODEL`, and `GROQ_STT_MODEL`.
+7. Deploy.
 
 ### Option B: Render/Railway (full Python hosting)
 1. Create a Web Service from your repo.
@@ -24,7 +25,8 @@ Use **Streamlit Community Cloud** or **Render/Railway** for the full app.
    `streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true`
 4. Set root directory to `ai_debate_partner`.
 5. Add env variable `OPENAI_API_KEY`.
-6. Deploy.
+6. Optional for Groq: add `AI_PROVIDER=groq`, `STT_PROVIDER=groq`, `GROQ_API_KEY`, `GROQ_MODEL`, and `GROQ_STT_MODEL`.
+7. Deploy.
 
 ## If Your Course Requires Vercel Specifically
 Use a hybrid model:

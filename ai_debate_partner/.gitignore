@@ -3,6 +3,7 @@
 .env
 .env.*
 *.env
+.streamlit/secrets.toml
 env/
 venv/
 .venv/

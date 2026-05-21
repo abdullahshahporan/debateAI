@@ -80,6 +80,24 @@ OPENAI_MODEL=gpt-4o-mini
 OPENAI_STT_MODEL=whisper-1
 ```
 
+## Optional: Use Groq
+Groq can be used for speech-to-text, the AI counter-argument, and personalized feedback.
+
+```env
+AI_PROVIDER=groq
+STT_PROVIDER=groq
+
+GROQ_API_KEY=your_groq_api_key_here
+GROQ_MODEL=llama-3.1-8b-instant
+GROQ_STT_MODEL=whisper-large-v3-turbo
+
+OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_STT_MODEL=whisper-1
+```
+
+Set `AI_PROVIDER=openai` or remove `AI_PROVIDER` to use OpenAI for feedback again.
+Set `STT_PROVIDER=openai` if you want OpenAI transcription while using Groq for feedback.
+
 ## How to Run the Project
 From the project directory:
 ```bash
